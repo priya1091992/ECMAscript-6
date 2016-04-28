@@ -7,23 +7,14 @@ console.log(a); // prints value 10
 
 //const a=20; //gives an error 'Duplicate value declaration'
 
-// var obj={
-//   name:"priya"
-// }
-
-// var obj={        // allow to declare new object with the same name
-//   name:"abc",
-//   age:24
-// }
-
-const obj={
-  name:"priya"
-}
-
-/*const obj={       //duplicate declaration obj
- name:"priya",
- age:24
- }*/
+//const obj={
+//  name:"priya"
+//}
+//
+///*const obj={       //duplicate declaration obj
+// name:"priya",
+// age:24
+// }*/
 
 obj.name='alpha'  //allow to change the values of object but doesnot allow to reinitialize the object
 const obj1={
@@ -72,4 +63,12 @@ ab();
 /*const aa=function(){  //duplicate declaration of a function
 
  }*/
+
+//********************with classes****************8
+class a{
+
+}
+const obj2=new a();
+var obj3=new a();
+//obj2=obj3;// error
 
