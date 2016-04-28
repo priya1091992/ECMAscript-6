@@ -16,6 +16,18 @@ console.log(a,b,d); // 50 60 40 after changed
 //console.log(a,b,c,d); // error : c is not defined
 
 
+//>>>>>>>.>>
+
+var x=10;
+var x=20; //ok
+let b=10;
+//let b=20;// error duplicate declaration
+b=30; //ok
+
+//>>>>>>>
+
+
+
 
 /* in es5
 "use strict";

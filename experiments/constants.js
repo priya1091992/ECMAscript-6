@@ -1,16 +1,27 @@
 
 'use strict'
 
+//constants have block level scope
+
+const a=10;
+// const a=20; //duplicate declaration
+{
+  const a=20;
+  console.log(a,"In block"); //20
+}
+console.log(a,"In outer block") //10
+
+
 //**********const with values and objects****************************
 const a=10;
 console.log(a); // prints value 10
 
 //const a=20; //gives an error 'Duplicate value declaration'
 
-//const obj={
-//  name:"priya"
-//}
-//
+const obj={
+  name:"priya"
+}
+
 ///*const obj={       //duplicate declaration obj
 // name:"priya",
 // age:24
@@ -64,11 +75,26 @@ ab();
 
  }*/
 
-//********************with classes****************8
-class a{
+//********************with classes*****************
+class alpha1{
 
 }
-const obj2=new a();
-var obj3=new a();
+const obj2=new alpha1();
+var obj3=new alpha1();
 //obj2=obj3;// error
 
+
+//************************** class functions can be override*********
+
+class test{
+  atest(){
+    console.log("this is first");
+  }
+
+  atest(){
+    console.log("this is second");
+  }
+}
+
+var testobj=new test();
+testobj.atest();   //this is second  (the function here is override)
