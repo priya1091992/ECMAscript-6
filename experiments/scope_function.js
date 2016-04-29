@@ -57,3 +57,12 @@
  // console.log("aplha equal to 1",beta()===2); //error beta is not defined
  }
  */
+
+
+
+//******************* default values in functions*************
+function f (x, y, z = 42) {
+  console.log(x,'y is not defined',y,z); //1 42
+  return x + y + z;
+}
+console.log(f(1) === 50)

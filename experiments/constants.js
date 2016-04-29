@@ -2,11 +2,11 @@
 'use strict'
 
 //constants have block level scope
-
-const a=10;
+//A constant cannot share its name with a function or a variable in the same scope.
+const a1=10;
 // const a=20; //duplicate declaration
 {
-  const a=20;
+  const a1=20;
   console.log(a,"In block"); //20
 }
 console.log(a,"In outer block") //10
@@ -98,3 +98,29 @@ class test{
 
 var testobj=new test();
 testobj.atest();   //this is second  (the function here is override)
+
+//___defining constants in classes_________________
+
+// {
+// const constant1 = 33,
+//       constant2 = 2;
+// }
+
+  const constant1 = 33,
+    constant2 = 2;
+
+class Example {
+
+  static get constant1() {
+    return constant1;
+  }
+
+  static get constant2() {
+    return constant2;
+  }
+}
+
+const one = Example.constant1;  //constant1 is not defined if defined in block level scope
+const one1 = Example.constant2; //constant2 is not defined if defined in block level scope
+console.log(one);  //33
+console.log(one1); //2
